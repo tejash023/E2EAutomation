@@ -28,7 +28,7 @@ public class TC02_Login_Success extends BaseClass{
         LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
         loginSignupPage.setTextSignUpEmail("qwerty09109@gmail.com");
         loginSignupPage.setTxtPassword("password123");
-        loginSignupPage.click();
+        loginSignupPage.clickLoginButton();
     }
 
 }
