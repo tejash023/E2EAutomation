@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
-
+    public static String expectedTitle = "Automation Exercise";
     public HomePage(WebDriver driver)
     {
         super(driver);
@@ -23,4 +23,10 @@ public class HomePage extends BasePage{
     {
         linkSignupLogin.click();
     }
+
+    public boolean isPageTitleCorrect(){
+        String actualTitle = driver.getTitle();
+        return actualTitle.contains(expectedTitle);
+    }
+
 }

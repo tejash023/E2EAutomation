@@ -10,19 +10,19 @@ public class LoginSignupPage extends BasePage{
         super(driver);
     }
 
-    //Signup Text
+    //Locator Signup Message
     @FindBy(xpath = "//*[@class='signup-form']/h2[contains(text(),'New User Signup!')]")
     WebElement signUpMessage;
 
-    //Signup Name
+    //Locator Signup Name
     @FindBy(xpath = "//input[@data-qa='signup-name']")
     WebElement textSignUpName;
 
-    //Signup Email
+    //Locator Signup Email
     @FindBy(xpath = "//input[@data-qa='signup-email']")
     WebElement textSignUpEmail;
 
-    //SignUp Button
+    //Locator SignUp Button
     @FindBy(xpath = "//button[@data-qa='signup-button']")
     WebElement signUpButton;
 
@@ -37,6 +37,14 @@ public class LoginSignupPage extends BasePage{
     public void clickSignUpButton(){
         wait.until(ExpectedConditions.visibilityOf(signUpButton));
         signUpButton.click();
+    }
+
+    public boolean isSignUpMessageDisplayed(){
+        try{
+            return signUpMessage.isDisplayed();
+        }catch (Exception e){
+            return false;
+        }
     }
 
 }
