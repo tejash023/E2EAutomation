@@ -10,36 +10,32 @@ public class LoginSignupPage extends BasePage{
         super(driver);
     }
 
-    //Locator Password
-    @FindBy(name = "password")
+    //Locator password
+    @FindBy(name="password")
     WebElement txtPassword;
+
+    //Locator Signup Message
+    @FindBy(xpath = "//*[@class='signup-form']/h2[contains(text(),'New User Signup!')]")
+    WebElement signUpMessage;
+
+    //Locator Signup Name
+    @FindBy(xpath = "//input[@data-qa='signup-name']")
+    WebElement textSignUpName;
+
+    //Locator Signup Email
+    @FindBy(xpath = "//input[@data-qa='signup-email']")
+    WebElement textSignUpEmail;
+
+    //Locator SignUp Button
+    @FindBy(xpath = "//button[@data-qa='signup-button']")
+    WebElement signUpButton;
 
     //Locator Login Button
     @FindBy(xpath = "//button[text()='Login']")
     WebElement btnLogin;
 
-    //Signup Text
-    @FindBy(xpath = "//*[@class='signup-form']/h2[contains(text(),'New User Signup!')]")
-    WebElement signUpMessage;
-
-    //Signup Name
-    @FindBy(xpath = "//input[@data-qa='signup-name']")
-    WebElement textSignUpName;
-
-    //Signup Email
-    @FindBy(xpath = "//input[@data-qa='signup-email']")
-    WebElement txtEmail;
-
-    //SignUp Button
-    @FindBy(xpath = "//button[@data-qa='signup-button']")
-    WebElement signUpButton;
-
     public void setTextSignUpName(String name){
         textSignUpName.sendKeys(name);
-    }
-
-    public void setTextEmail(String email){
-        txtEmail.sendKeys(email);
     }
 
     public void setTxtPassword(String password)
@@ -47,7 +43,11 @@ public class LoginSignupPage extends BasePage{
         txtPassword.sendKeys(password);
     }
 
-    public void click()
+    public void setTextSignUpEmail(String email){
+        textSignUpEmail.sendKeys(email);
+    }
+
+    public void clickLoginButton()
     {
         btnLogin.click();
     }
@@ -55,6 +55,14 @@ public class LoginSignupPage extends BasePage{
     public void clickSignUpButton(){
         wait.until(ExpectedConditions.visibilityOf(signUpButton));
         signUpButton.click();
+    }
+
+    public boolean isSignUpMessageDisplayed(){
+        try{
+            return signUpMessage.isDisplayed();
+        }catch (Exception e){
+            return false;
+        }
     }
 
 }
