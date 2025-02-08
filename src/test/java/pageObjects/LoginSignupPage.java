@@ -26,6 +26,10 @@ public class LoginSignupPage extends BasePage{
     @FindBy(xpath = "//input[@data-qa='signup-email']")
     WebElement textSignUpEmail;
 
+    //Locator Login Email
+    @FindBy(xpath = "//input[@data-qa='login-email']")
+    WebElement textLoginEmail;
+
     //Locator SignUp Button
     @FindBy(xpath = "//button[@data-qa='signup-button']")
     WebElement signUpButton;
@@ -45,6 +49,11 @@ public class LoginSignupPage extends BasePage{
 
     public void setTextSignUpEmail(String email){
         textSignUpEmail.sendKeys(email);
+    }
+
+    public void setTextLoginEmail(String email)
+    {
+        textLoginEmail.sendKeys(email);
     }
 
     public void clickLoginButton()
