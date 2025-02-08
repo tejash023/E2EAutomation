@@ -10,6 +10,14 @@ public class LoginSignupPage extends BasePage{
         super(driver);
     }
 
+    //Locator Password
+    @FindBy(name = "password")
+    WebElement txtPassword;
+
+    //Locator Login Button
+    @FindBy(xpath = "//button[text()='Login']")
+    WebElement btnLogin;
+
     //Signup Text
     @FindBy(xpath = "//*[@class='signup-form']/h2[contains(text(),'New User Signup!')]")
     WebElement signUpMessage;
@@ -20,7 +28,7 @@ public class LoginSignupPage extends BasePage{
 
     //Signup Email
     @FindBy(xpath = "//input[@data-qa='signup-email']")
-    WebElement textSignUpEmail;
+    WebElement txtEmail;
 
     //SignUp Button
     @FindBy(xpath = "//button[@data-qa='signup-button']")
@@ -30,8 +38,18 @@ public class LoginSignupPage extends BasePage{
         textSignUpName.sendKeys(name);
     }
 
-    public void setTextSignUpEmail(String email){
-        textSignUpEmail.sendKeys(email);
+    public void setTextEmail(String email){
+        txtEmail.sendKeys(email);
+    }
+
+    public void setTxtPassword(String password)
+    {
+        txtPassword.sendKeys(password);
+    }
+
+    public void click()
+    {
+        btnLogin.click();
     }
 
     public void clickSignUpButton(){
