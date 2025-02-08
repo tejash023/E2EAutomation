@@ -13,14 +13,14 @@ public class HomePage extends BasePage{
 
     // Locator for finding the link for Signup/Login
     @FindBy(xpath = "//a[text()=' Signup / Login']")
-    WebElement btnsignup_login;
+    WebElement linkSignupLogin;
 
     /*
     / Method for login/Signup
     / no parameter and return type
     */
-    public void clicksignup_login()
+    public void clickSignupLogin()
     {
-        btnsignup_login.click();
+        linkSignupLogin.click();
     }
 }

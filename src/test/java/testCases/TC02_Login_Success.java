@@ -19,7 +19,7 @@ public class TC02_Login_Success extends BaseClass{
     public void login()
     {
         HomePage hp=new HomePage(driver);
-        hp.clicksignup_login();
+        hp.clickSignupLogin();
     }
 
 }
