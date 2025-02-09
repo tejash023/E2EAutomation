@@ -28,8 +28,8 @@ public class TC02_LoginSuccess extends BaseClass{
         HomePage homePage=new HomePage(driver);
         homePage.clickSignupLogin();
         LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
-        loginSignupPage.setTextLoginEmail("qwerty09109@gmail.com");
-        loginSignupPage.setTxtPassword("password123");
+        loginSignupPage.setTextLoginEmail(p.getProperty("email"));
+        loginSignupPage.setTxtPassword(p.getProperty("password"));
         loginSignupPage.clickLoginButton();
         HomePage homePage1=new HomePage(driver);
         WebElement loggedInAs=homePage1.getMenuElement("Logged in as"+" abc");

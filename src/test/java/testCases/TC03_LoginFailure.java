@@ -15,12 +15,12 @@ public class TC03_LoginFailure extends BaseClass{
     / Verify error 'Your email or password is incorrect!' is visible
     */
     @Test
-    public void login()
+    public void loginFailure()
     {
         HomePage homePage=new HomePage(driver);
         homePage.clickSignupLogin();
         LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
-        loginSignupPage.setTextLoginEmail("qwerty09109@gmail.com");
+        loginSignupPage.setTextLoginEmail(p.getProperty("email"));
         loginSignupPage.setTxtPassword("password1234");
         loginSignupPage.clickLoginButton();
         Assert.assertTrue(loginSignupPage.isLoginErrorMessageDisplayed(),"Error Message isn't displayed");

@@ -5,14 +5,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 public class BaseClass {
 
+    public static Properties p;
     public static WebDriver driver;
 
     @BeforeMethod(alwaysRun = true)
-    public void setUp(){
+    public void setUp() throws IOException {
+        /*
+        / Below snippet to load the properties file
+         */
+        FileReader file=new FileReader("./src//test//resources//config.properties");
+        p=new Properties();
+        p.load(file);
+
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
