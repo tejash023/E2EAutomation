@@ -1,12 +1,11 @@
 package testCases;
 
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginSignupPage;
 
-public class TC03_Login_Failure extends BaseClass{
+public class TC03_LoginFailure extends BaseClass{
     /*
     / Test Steps to be followed for Failure in Login
     / Click on 'Signup / Login' button

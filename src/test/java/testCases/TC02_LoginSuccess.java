@@ -8,11 +8,9 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginSignupPage;
 
-import java.time.Duration;
+public class TC02_LoginSuccess extends BaseClass{
 
-public class TC02_Login_Success extends BaseClass{
-
-    private static final Logger log = LoggerFactory.getLogger(TC02_Login_Success.class);
+    private static final Logger log = LoggerFactory.getLogger(TC02_LoginSuccess.class);
 
     /*
         / Test Steps to be followed for Successful Login
