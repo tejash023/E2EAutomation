@@ -38,6 +38,10 @@ public class LoginSignupPage extends BasePage{
     @FindBy(xpath = "//button[text()='Login']")
     WebElement btnLogin;
 
+    //Locator Error Message Text for Login Failure
+    @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
+    WebElement txtErrorLogin;
+
     public void setTextSignUpName(String name){
         textSignUpName.sendKeys(name);
     }
@@ -72,6 +76,11 @@ public class LoginSignupPage extends BasePage{
         }catch (Exception e){
             return false;
         }
+    }
+
+    public boolean isLoginErrorMessageDisplayed()
+    {
+        return txtErrorLogin.isDisplayed();
     }
 
 }
