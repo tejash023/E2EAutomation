@@ -1,0 +1,6 @@
+2025-02-10 21:50:59 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+2025-02-10 21:51:00 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+
+2025-02-10 21:51:05 INFO  TC03_LoginFailure:20 - **** TC03 Login Failure Test Case Started ****
+2025-02-10 21:51:08 INFO  TC03_LoginFailure:29 - **** TC03 Login Failure Test Case Successfully Completed ****

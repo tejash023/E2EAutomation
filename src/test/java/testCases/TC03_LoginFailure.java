@@ -17,6 +17,7 @@ public class TC03_LoginFailure extends BaseClass{
     @Test
     public void loginFailure()
     {
+        logger.info("**** TC03 Login Failure Test Case Started ****");
         HomePage homePage=new HomePage(driver);
         homePage.clickSignupLogin();
         LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
@@ -24,6 +25,8 @@ public class TC03_LoginFailure extends BaseClass{
         loginSignupPage.setTxtPassword("password1234");
         loginSignupPage.clickLoginButton();
         Assert.assertTrue(loginSignupPage.isLoginErrorMessageDisplayed(),"Error Message isn't displayed");
+
+        logger.info("**** TC03 Login Failure Test Case Successfully Completed ****");
 
     }
 }

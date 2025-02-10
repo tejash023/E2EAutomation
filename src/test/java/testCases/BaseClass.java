@@ -1,5 +1,7 @@
 package testCases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -15,6 +17,7 @@ public class BaseClass {
 
     public static Properties p;
     public static WebDriver driver;
+    public static Logger logger;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws IOException {
@@ -24,6 +27,8 @@ public class BaseClass {
         FileReader file=new FileReader("./src//test//resources//config.properties");
         p=new Properties();
         p.load(file);
+
+        logger= LogManager.getLogger(this.getClass());
 
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
