@@ -11,7 +11,7 @@ public class TC01_UserRegistrationTest extends BaseClass {
     public void userRegistrationTest(){
         HomePage homePage = new HomePage(driver);
         Assert.assertTrue(homePage.isPageTitleCorrect(), "Home page did not load");
-        homePage.clickSignupLogin();
+        homePage.clickMenuItem("Signup");
 
         LoginSignupPage loginSignupPage = new LoginSignupPage(driver);
         Assert.assertTrue(loginSignupPage.isSignUpMessageDisplayed(), "Sign up message not displayed");

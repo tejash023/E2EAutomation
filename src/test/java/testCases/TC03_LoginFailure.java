@@ -19,7 +19,7 @@ public class TC03_LoginFailure extends BaseClass{
     {
         logger.info("**** TC03 Login Failure Test Case Started ****");
         HomePage homePage=new HomePage(driver);
-        homePage.clickSignupLogin();
+        homePage.clickMenuItem("Login");
         LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
         loginSignupPage.setTextLoginEmail(p.getProperty("email"));
         loginSignupPage.setTxtPassword("password1234");

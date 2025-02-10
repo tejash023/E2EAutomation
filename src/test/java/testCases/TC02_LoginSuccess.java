@@ -1,8 +1,6 @@
 package testCases;
 
 import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
@@ -25,7 +23,7 @@ public class TC02_LoginSuccess extends BaseClass{
     {
         logger.info("**** Successful Login Test Start ****");
         HomePage homePage=new HomePage(driver);
-        homePage.clickSignupLogin();
+        homePage.clickMenuItem("Login");
         LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
 
         logger.info("**** Email and Password Taken from Properties file ****");
