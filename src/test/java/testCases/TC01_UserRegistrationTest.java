@@ -2,13 +2,11 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.HomePage;
-import pageObjects.LoginSignupPage;
-import pageObjects.SignUpPage;
+import pageObjects.*;
 
 public class TC01_UserRegistrationTest extends BaseClass {
     private static final String TEST_NAME = "Tejash";
-    private static final String TEST_EMAIL = "tejash@gmail.com";
+    private static final String TEST_EMAIL = "tejashwa@gmail.com";
     private static final String TEST_PASSWORD = "123456";
     private static final String TEST_FIRST_NAME = "Tejas";
     private static final String TEST_LAST_NAME = "Raj";
@@ -25,23 +23,35 @@ public class TC01_UserRegistrationTest extends BaseClass {
 
     @Test
     public void userRegistrationTest(){
-
         logger.info("****** TC01 User Registration Test started *******");
-        HomePage homePage = new HomePage(driver);
-        Assert.assertTrue(homePage.isPageTitleCorrect(), "Home page did not load");
-        homePage.clickMenuItem("Signup");
+        try {
+            HomePage homePage = new HomePage(driver);
+            Assert.assertTrue(homePage.isPageTitleCorrect(), "Home page did not load");
+            homePage.clickMenuItem("Signup");
 
-        LoginSignupPage loginSignupPage = new LoginSignupPage(driver);
-        Assert.assertTrue(loginSignupPage.isSignUpMessageDisplayed(), "Sign up message not displayed");
-        loginSignupPage.setTextSignUpName(TEST_NAME);
-        loginSignupPage.setTextSignUpEmail(TEST_EMAIL);
-        loginSignupPage.clickSignUpButton();
+            LoginSignupPage loginSignupPage = new LoginSignupPage(driver);
+            Assert.assertTrue(loginSignupPage.isSignUpMessageDisplayed(), "Sign up message not displayed");
+            loginSignupPage.setTextSignUpName(TEST_NAME);
+            loginSignupPage.setTextSignUpEmail(TEST_EMAIL);
+            loginSignupPage.clickSignUpButton();
 
-        SignUpPage signUpPage = initializeSignUpPage();
-        signUpPage.clickCreateAccountButton();
+            SignUpPage signUpPage = initializeSignUpPage();
+            signUpPage.clickCreateAccountButton();
 
+            AccountCreatedPage accountCreatedPage = new AccountCreatedPage(driver);
+            verifyElementDisplayed("Account created confirmation message", accountCreatedPage.isAccountCreatedMessageDisplayed());
+            accountCreatedPage.clickContinueButton();
 
+            homePage.clickMenuItem("Delete Account");
 
+            DeleteAccountPage deleteAccountPage = new DeleteAccountPage(driver);
+            verifyElementDisplayed("Account deleted confirmation message", deleteAccountPage.isAccountDeletedMessageDisplayed());
+            deleteAccountPage.clickContinueButton();
+        } catch (Exception e) {
+            logger.error("TC01 Test Failed");
+            logger.debug("Debug Logs");
+            Assert.fail("TC01 Test Failed");
+        }
         logger.info("****** TC01 User Registration Test ended *******");
     }
 
@@ -65,5 +75,9 @@ public class TC01_UserRegistrationTest extends BaseClass {
         signUpPage.setZipCode(TEST_ZIP);
         signUpPage.setMobileNumber(TEST_MOBILE);
         return signUpPage;
+    }
+
+    private void verifyElementDisplayed(String elementDescription, boolean isDisplayed) {
+        Assert.assertTrue(isDisplayed, elementDescription + " not displayed!");
     }
 }

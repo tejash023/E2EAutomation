@@ -16,6 +16,7 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
+
     /* Used New logic to find all the elements of the Menu Bar
     // Locator for finding the link for Signup/Login
     @FindBy(xpath = "//a[text()=' Signup / Login']")

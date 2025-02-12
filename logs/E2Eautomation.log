@@ -4,3 +4,14 @@
 
 2025-02-12 14:32:03 INFO  TC01_UserRegistrationTest:29 - ****** TC01 User Registration Test started *******
 2025-02-12 14:32:12 INFO  TC01_UserRegistrationTest:45 - ****** TC01 User Registration Test ended *******
+2025-02-12 14:40:08 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\TejashwaRajvardhan\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+2025-02-12 14:40:08 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\TejashwaRajvardhan\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+
+2025-02-12 14:40:24 INFO  TC01_UserRegistrationTest:30 - ****** TC01 User Registration Test started *******
+2025-02-12 14:40:51 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\TejashwaRajvardhan\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+2025-02-12 14:40:51 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\TejashwaRajvardhan\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+
+2025-02-12 14:40:57 INFO  TC01_UserRegistrationTest:30 - ****** TC01 User Registration Test started *******
+2025-02-12 14:41:07 INFO  TC01_UserRegistrationTest:51 - ****** TC01 User Registration Test ended *******

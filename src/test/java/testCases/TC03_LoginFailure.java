@@ -18,13 +18,19 @@ public class TC03_LoginFailure extends BaseClass{
     public void loginFailure()
     {
         logger.info("**** TC03 Login Failure Test Case Started ****");
-        HomePage homePage=new HomePage(driver);
-        homePage.clickMenuItem("Login");
-        LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
-        loginSignupPage.setTextLoginEmail(p.getProperty("email"));
-        loginSignupPage.setTxtPassword("password1234");
-        loginSignupPage.clickLoginButton();
-        Assert.assertTrue(loginSignupPage.isLoginErrorMessageDisplayed(),"Error Message isn't displayed");
+        try{
+            HomePage homePage=new HomePage(driver);
+            homePage.clickMenuItem("Login");
+            LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
+            loginSignupPage.setTextLoginEmail(p.getProperty("email"));
+            loginSignupPage.setTxtPassword("password1234");
+            loginSignupPage.clickLoginButton();
+            Assert.assertTrue(loginSignupPage.isLoginErrorMessageDisplayed(),"Error Message isn't displayed");
+        } catch (Exception e) {
+            logger.error("TC03 Test Failed");
+            logger.debug("Debug Logs");
+            Assert.fail("TC03 Test Failed");
+        }
 
         logger.info("**** TC03 Login Failure Test Case Successfully Completed ****");
 

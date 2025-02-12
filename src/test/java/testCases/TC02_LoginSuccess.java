@@ -22,21 +22,26 @@ public class TC02_LoginSuccess extends BaseClass{
     public void login()
     {
         logger.info("**** Successful Login Test Start ****");
-        HomePage homePage=new HomePage(driver);
-        homePage.clickMenuItem("Login");
-        LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
+        try {
+            HomePage homePage=new HomePage(driver);
+            homePage.clickMenuItem("Login");
+            LoginSignupPage loginSignupPage=new LoginSignupPage(driver);
 
-        logger.info("**** Email and Password Taken from Properties file ****");
+            logger.info("**** Email and Password Taken from Properties file ****");
 
-        loginSignupPage.setTextLoginEmail(p.getProperty("email"));
-        loginSignupPage.setTxtPassword(p.getProperty("password"));
-        loginSignupPage.clickLoginButton();
-        HomePage homePage1=new HomePage(driver);
-        WebElement loggedInAs=homePage1.getMenuElement("Logged in as"+" abc");
-        Assert.assertTrue(loggedInAs.isDisplayed(),"loggedInAs is not displayed");
-        Assert.assertTrue(homePage1.getMenuElement("Logout").isDisplayed());
-        homePage1.getMenuElement("Logout").click();
-
+            loginSignupPage.setTextLoginEmail(p.getProperty("email"));
+            loginSignupPage.setTxtPassword(p.getProperty("password"));
+            loginSignupPage.clickLoginButton();
+            HomePage homePage1=new HomePage(driver);
+            WebElement loggedInAs=homePage1.getMenuElement("Logged in as"+" abc");
+            Assert.assertTrue(loggedInAs.isDisplayed(),"loggedInAs is not displayed");
+            Assert.assertTrue(homePage1.getMenuElement("Logout").isDisplayed());
+            homePage1.getMenuElement("Logout").click();
+        } catch (Exception e) {
+            logger.error("TC02 Test Failed");
+            logger.debug("Debug Logs");
+            Assert.fail("TC02 Test Failed");
+        }
         logger.info("**** TC02_Successful Login Completed ****");
 
     }
