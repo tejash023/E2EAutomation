@@ -14,7 +14,7 @@ public class TC03_LoginFailure extends BaseClass{
     / Click 'login' button
     / Verify error 'Your email or password is incorrect!' is visible
     */
-    @Test
+    @Test(groups = "Master")
     public void loginFailure()
     {
         logger.info("**** TC03 Login Failure Test Case Started ****");

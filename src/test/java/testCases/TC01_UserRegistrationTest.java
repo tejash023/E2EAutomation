@@ -21,7 +21,7 @@ public class TC01_UserRegistrationTest extends BaseClass {
     private static final int TEST_MONTH = 2;
     private static final String TEST_YEAR = "1998";
 
-    @Test
+    @Test(groups = {"Master", "Regression"})
     public void userRegistrationTest(){
         logger.info("****** TC01 User Registration Test started *******");
         try {

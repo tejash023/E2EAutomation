@@ -18,7 +18,7 @@ public class TC02_LoginSuccess extends BaseClass{
         / Verify Logout Button is visible
         / Click 'Logout' button
         */
-    @Test
+    @Test(groups = {"Master", "Regression"})
     public void login()
     {
         logger.info("**** Successful Login Test Start ****");
