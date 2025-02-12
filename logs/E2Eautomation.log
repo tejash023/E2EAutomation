@@ -1,27 +1,6 @@
-2025-02-11 00:39:57 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-2025-02-11 00:39:57 INFO  Utils:112 - [TestNG] Running:
-  C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
+2025-02-12 14:31:51 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\TejashwaRajvardhan\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
+2025-02-12 14:31:51 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\TejashwaRajvardhan\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
 
-2025-02-11 00:40:02 INFO  TC02_LoginSuccess:24 - **** Successful Login Test Start ****
-2025-02-11 00:40:04 INFO  TC02_LoginSuccess:29 - **** Email and Password Taken from Properties file ****
-2025-02-11 00:40:14 INFO  TC02_LoginSuccess:40 - **** TC02_Successful Login Completed ****
-2025-02-11 00:40:27 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-2025-02-11 00:40:27 INFO  Utils:112 - [TestNG] Running:
-  C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-2025-02-11 00:40:32 INFO  TC02_LoginSuccess:24 - **** Successful Login Test Start ****
-2025-02-11 00:40:34 INFO  TC02_LoginSuccess:29 - **** Email and Password Taken from Properties file ****
-2025-02-11 00:40:44 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-2025-02-11 00:40:44 INFO  Utils:112 - [TestNG] Running:
-  C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-2025-02-11 00:40:49 INFO  TC02_LoginSuccess:24 - **** Successful Login Test Start ****
-2025-02-11 00:40:51 INFO  TC02_LoginSuccess:29 - **** Email and Password Taken from Properties file ****
-2025-02-11 00:40:56 INFO  TC02_LoginSuccess:40 - **** TC02_Successful Login Completed ****
-2025-02-11 00:42:41 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml"
-2025-02-11 00:42:42 INFO  Utils:112 - [TestNG] Running:
-  C:\Users\000ZZA744\AppData\Local\JetBrains\IdeaIC2024.3\temp-testng-customsuite.xml
-
-2025-02-11 00:42:48 INFO  TC02_LoginSuccess:24 - **** Successful Login Test Start ****
-2025-02-11 00:42:50 INFO  TC02_LoginSuccess:29 - **** Email and Password Taken from Properties file ****
-2025-02-11 00:42:55 INFO  TC02_LoginSuccess:40 - **** TC02_Successful Login Completed ****
+2025-02-12 14:32:03 INFO  TC01_UserRegistrationTest:29 - ****** TC01 User Registration Test started *******
+2025-02-12 14:32:12 INFO  TC01_UserRegistrationTest:45 - ****** TC01 User Registration Test ended *******

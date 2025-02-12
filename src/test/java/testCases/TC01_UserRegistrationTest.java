@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginSignupPage;
+import pageObjects.SignUpPage;
 
 public class TC01_UserRegistrationTest extends BaseClass {
     private static final String TEST_NAME = "Tejash";
@@ -32,6 +33,37 @@ public class TC01_UserRegistrationTest extends BaseClass {
 
         LoginSignupPage loginSignupPage = new LoginSignupPage(driver);
         Assert.assertTrue(loginSignupPage.isSignUpMessageDisplayed(), "Sign up message not displayed");
+        loginSignupPage.setTextSignUpName(TEST_NAME);
+        loginSignupPage.setTextSignUpEmail(TEST_EMAIL);
+        loginSignupPage.clickSignUpButton();
+
+        SignUpPage signUpPage = initializeSignUpPage();
+        signUpPage.clickCreateAccountButton();
+
+
+
         logger.info("****** TC01 User Registration Test ended *******");
+    }
+
+
+    private SignUpPage initializeSignUpPage() {
+        SignUpPage signUpPage = new SignUpPage(driver);
+        signUpPage.setGenderTitle();
+        signUpPage.setPassword(TEST_PASSWORD);
+        signUpPage.setBirthDay(TEST_DAY);
+        signUpPage.setBirthMonth(TEST_MONTH);
+        signUpPage.setBirthYear(TEST_YEAR);
+        signUpPage.selectNewsLetters();
+        signUpPage.selectSpecialOffers();
+        signUpPage.setFirstName(TEST_FIRST_NAME);
+        signUpPage.setLastName(TEST_LAST_NAME);
+        signUpPage.setCompany(TEST_COMPANY);
+        signUpPage.setAddress(TEST_ADDRESS);
+        signUpPage.setCountry(TEST_COUNTRY);
+        signUpPage.setState(TEST_STATE);
+        signUpPage.setCity(TEST_CITY);
+        signUpPage.setZipCode(TEST_ZIP);
+        signUpPage.setMobileNumber(TEST_MOBILE);
+        return signUpPage;
     }
 }
