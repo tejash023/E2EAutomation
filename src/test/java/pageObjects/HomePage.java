@@ -65,7 +65,7 @@ public class HomePage extends BasePage {
         {
             for (WebElement e : menu)
             {
-                if (e.getText().equalsIgnoreCase(menuItem)) {
+                if (e.getText().contains(menuItem)) {
                     item=e;
                 }
             }
