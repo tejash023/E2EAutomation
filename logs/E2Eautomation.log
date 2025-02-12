@@ -15,3 +15,16 @@
 
 2025-02-12 14:40:57 INFO  TC01_UserRegistrationTest:30 - ****** TC01 User Registration Test started *******
 2025-02-12 14:41:07 INFO  TC01_UserRegistrationTest:51 - ****** TC01 User Registration Test ended *******
+2025-02-12 14:50:24 DEBUG TestNG:82 - suiteXmlPath: "C:\Users\TejashwaRajvardhan\IdeaProjects\E2EAutomation\src\master.xml"
+2025-02-12 14:50:24 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\TejashwaRajvardhan\IdeaProjects\E2EAutomation\src\master.xml
+
+2025-02-12 14:50:45 INFO  TC01_UserRegistrationTest:26 - ****** TC01 User Registration Test started *******
+2025-02-12 14:50:59 ERROR TC01_UserRegistrationTest:51 - TC01 Test Failed
+2025-02-12 14:50:59 DEBUG TC01_UserRegistrationTest:52 - Debug Logs
+2025-02-12 14:51:15 INFO  TC02_LoginSuccess:24 - **** Successful Login Test Start ****
+2025-02-12 14:51:17 INFO  TC02_LoginSuccess:30 - **** Email and Password Taken from Properties file ****
+2025-02-12 14:52:27 ERROR TC02_LoginSuccess:41 - TC02 Test Failed
+2025-02-12 14:52:27 DEBUG TC02_LoginSuccess:42 - Debug Logs
+2025-02-12 14:52:42 INFO  TC03_LoginFailure:20 - **** TC03 Login Failure Test Case Started ****
+2025-02-12 14:52:46 INFO  TC03_LoginFailure:35 - **** TC03 Login Failure Test Case Successfully Completed ****
