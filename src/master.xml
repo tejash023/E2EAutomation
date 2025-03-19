@@ -11,6 +11,9 @@
             <class name="testCases.TC01_UserRegistrationTest" />
             <class name="testCases.TC02_LoginSuccess"/>
             <class name="testCases.TC03_LoginFailure" />
+            <class name="testCases.TC05_LogoutUser" />
+            <class name="testCases.TC06_ContactForm" />
+            <class name="testCases.TC07_VerifyTestCasePage" />
 
         </classes>
     </test>
